@@ -15,5 +15,5 @@ Pizza.prototype.costCalculator = function() {
   return this.basePrice;
 }
 
-let pizza1 = new Pizza("ham", "medium")
+let pizza1 = new Pizza("ham", "medium");
 pizza1.costCalculator();
