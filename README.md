@@ -12,8 +12,12 @@ Expect(pizza1.baseprice.toEqual(11))
 
 Test: "It should increase price by 2 when one protein topping value is inputted."
 Code: let pizza1 = new Pizza ("ham", medium, 10)
-Expect(pizza1.basePrice.toEqual)
+Expect(pizza1.basePrice.toEqual(12))
 
 Test: "It should increase price by 2 when two veggie toppings are inputted."
 Code: let pizza1 = new Pizza(["olives", "mushrooms"], medium, 10)
-Expect(pizza1.basePrice.toEqual(12))
+Expect(basePrice.toEqual(12))
+
+Test : "It should increase price by 4 when two protien items are inputted."
+Code: let pizza1 = new Pizza(["ham", "bacon"], medium, 10)
+Expect(basePrice.toEqual(14))

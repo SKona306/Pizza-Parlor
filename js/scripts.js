@@ -1,8 +1,7 @@
 // Utility Logic 
+
 const veggieChoices = ["artichoke", "olives", "mushrooms", "basil"]
 const protienChoices = ["pepperoni", "bacon", "ham", "sausage"]
-let basePrice = 10;
-
 
 //Business Logic for Pizza orders
 
@@ -12,6 +11,7 @@ function Pizza (toppings, size) {
 }
 
 Pizza.prototype.costCalculator = function() {
+  let basePrice = 10;
   this.toppings.forEach(function(topping) {
     if(veggieChoices.includes(topping)) {
       basePrice += 1;
@@ -19,7 +19,7 @@ Pizza.prototype.costCalculator = function() {
       basePrice += 2;
     }
   })
-  
+  return basePrice;
 }
 
 let pizza1 = new Pizza(["mushrooms", "basil", "ham", "bacon"], "medium");
