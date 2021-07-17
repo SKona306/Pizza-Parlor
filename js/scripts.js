@@ -1,19 +1,26 @@
+// Utility Logic 
+const veggieChoices = ["artichoke", "olives", "mushrooms", "basil"]
+const protienChoices = ["pepperoni", "bacon", "ham", "sausage"]
+let basePrice = 10;
+
+
+//Business Logic for Pizza orders
+
 function Pizza (toppings, size) {
   this.toppings = toppings;
   this.size = size;
-  this.basePrice = 10;
 }
 
 Pizza.prototype.costCalculator = function() {
-  let veggieChoices = ["artichoke", "olives", "mushrooms", "basil"]
-  let protienChoices = ["pepperoni", "bacon", "ham", "sausage"]
-  if(veggieChoices.includes(this.toppings)) {
-    this.basePrice += 1;
-  }else if(protienChoices.includes(this.toppings)) {
-    this.basePrice += 2;
-  }
-  return this.basePrice;
+  this.toppings.forEach(function(topping) {
+    if(veggieChoices.includes(topping)) {
+      basePrice += 1;
+    }else if(protienChoices.includes(topping)) {
+      basePrice += 2;
+    }
+  })
+  
 }
 
-let pizza1 = new Pizza("ham", "medium");
+let pizza1 = new Pizza(["mushrooms", "basil", "ham", "bacon"], "medium");
 pizza1.costCalculator();
