@@ -31,3 +31,20 @@ Pizza.prototype.costCalculator = function() {
 
 // User Interface Logic
 
+$(document).ready(function() {
+  $("form#pizza-order").submit(function(event) {
+    event.preventDefault();
+    let toppingsArray = []
+    let pizzaSize = $("#size").val();
+    let pushToppings = $("input").each(function() {
+      if($(this).is(":checked")) {
+        toppingsArray.push($(this).val());
+      }
+    })
+    let newOrder = new Pizza(toppingsArray, pizzaSize)
+    let price = newOrder.costCalculator()
+    $(".pizza-size").html(pizzaSize);
+    $(".final-price").html(price)
+    $("#hidden").show();
+  })
+})
