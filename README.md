@@ -1,3 +1,37 @@
+# Pizza Parlor
+
+### A webpage that calculates the price of the users pizza order
+
+### By Shaun Kent
+
+## Technologies Used
+
+* HTML5
+* CSS
+* Bootstrap
+* Javascript
+* JQuery 
+
+## Description 
+
+A webpage that will take the users input for pizza toppings and size and return a final calculated price to the user. 
+
+## Setup/Instillation Requirements
+
+* Go to repository using this url: https://github.com/SKona306/Pizza-Parlor
+
+* Click the green code button in the top right of repository
+
+* Copy HTTPS link
+
+* Open command line and enter: `cd [directory name]`
+
+* In command line enter: `git clone [HTTPS link]`
+
+* In command line enter: `code .`
+
+## Specifications
+```
 Description: Pizza ()
 
 Test: "It will create a new instances of the pizza object with key-value pair of toppings and size."
@@ -25,3 +59,15 @@ Expect(pizza1.basePrice.toEqual(14))
 Test: "It should increase the price by the stated value based on the size inputted."
 Code: let pizza1 = new Pizza(["ham"], medium)
 Expect(pizza1.basePrice.toEqual(14))
+```
+## Known Bugs
+
+* width of the webpage is limited by the static sizing of the image, making readability and usability on mobile sized devices difficult/not available. 
+
+## License 
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Contact Information
+
+* shaunkent81@gmail.com
