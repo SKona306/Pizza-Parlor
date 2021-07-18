@@ -36,9 +36,9 @@ $(document).ready(function() {
     event.preventDefault();
     let toppingsArray = []
     let pizzaSize = $("#size").val();
-    let pushToppings = $("input").each(function() {
-      if($(this).is(":checked")) {
-        toppingsArray.push($(this).val());
+    $("input").each(function() {
+      if($("input").is(":checked")) {
+        toppingsArray.push($("input").val());
       }
     })
     let newOrder = new Pizza(toppingsArray, pizzaSize)
@@ -46,5 +46,5 @@ $(document).ready(function() {
     $(".pizza-size").html(pizzaSize);
     $(".final-price").html(price)
     $("#hidden").show();
-  })
-})
+  });
+});
