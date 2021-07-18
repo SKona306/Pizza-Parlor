@@ -19,15 +19,15 @@ Pizza.prototype.costCalculator = function() {
       basePrice += 2;
     }
   })
-  if(this.size === "small") {
+  if(this.size === "medium") {
     basePrice += 1;
-  }else if(this.size === "medium") {
-    basePrice += 2;
   }else if(this.size === "large") {
+    basePrice += 2;
+  }else if(this.size === "xl-lg") {
     basePrice += 3;
   }
   return basePrice;
 }
 
-let pizza1 = new Pizza([ "ham"], "medium");
-pizza1.costCalculator();
+// User Interface Logic
+

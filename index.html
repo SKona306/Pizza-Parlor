@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang= "en-US">
+  <head>
+    <link href="css/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Galactic Pizza</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h1>Galactic Pizza</h1>
+        <h4>Affordable pizza that is out of this galaxy!</h4>
+        <h6>All pizza's start at $10 just add your toppings and you are on your way!</h6>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <article id="veggies">
+          <h4>Select your veggies:</h4>
+            <input type="checkbox" id="veggie1" name="artichoke" value="artichoke">
+            <label for="veggie1">Artichoke</label><br>
+            <input type="checkbox" id="veggie2" name="olives" value="olives">
+            <label for="veggie2">Olives</label><br>
+            <input type="checkbox" id="veggie3" name="mushrooms" value="mushrooms">
+            <label for="veggie3">Mushrooms</label><br>
+            <input type="checkbox" id="veggie4" name="basil" value="basil">
+            <label for="veggie4">Basil</label><br>
+        </article>
+        <article id="protiens">
+          <h4>Select your Protiens:</h4>
+          <input type="checkbox" id="protein1" name="pepperoni" value="pepperoni">
+          <label for="protein1">Pepperoni</label><br>
+          <input type="checkbox" id="protein2" name="bacon" value="bacon">
+          <label for="protein2">Bacon</label><br>
+          <input type="checkbox" id="protein3" name="ham" value="ham">
+          <label for="protein3">Ham</label><br>
+          <input type="checkbox" id="protein4" name="sausage" value="sausage">
+          <label for="veggie4">Sausage</label><br>
+        </article>
+        <h4>Select a size:</h4>
+        <article id="size">
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="medium" checked>
+              Medium
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="large">
+              Large
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="xl-lg">
+              Extra Large
+            </label>
+          </div>
+        </article>
+      </div>
+    </section>
+    <aside id="hidden">
+    </aside>
+    <footer></footer>
+  </body>
+</html>
