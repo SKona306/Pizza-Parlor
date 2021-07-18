@@ -23,7 +23,7 @@ Pizza.prototype.costCalculator = function() {
     basePrice += 1;
   }else if(this.size === "large") {
     basePrice += 2;
-  }else if(this.size === "xl-lg") {
+  }else if(this.size === "Extra-large") {
     basePrice += 3;
   }
   return basePrice;
