@@ -1,7 +1,5 @@
 // Utility Logic 
 
-const veggieChoices = ["artichoke", "olives", "mushrooms", "basil"]
-const protienChoices = ["pepperoni", "bacon", "ham", "sausage"]
 
 //Business Logic for Pizza orders
 
@@ -11,6 +9,8 @@ function Pizza (toppings, size) {
 }
 
 Pizza.prototype.costCalculator = function() {
+  const veggieChoices = ["artichoke", "olives", "mushrooms", "basil"]
+  const protienChoices = ["pepperoni", "bacon", "ham", "sausage"]
   let basePrice = 10;
   this.toppings.forEach(function(topping) {
     if(veggieChoices.includes(topping)) {
@@ -36,11 +36,8 @@ $(document).ready(function() {
     event.preventDefault();
     let toppingsArray = []
     let pizzaSize = $("#size").val();
-    $("input").each(function() {
-      if($("input").is(":checked")) {
-        toppingsArray.push($("input").val());
-      }
-    })
+    let pushToppings = $("input:checkbox[name=toppings]:checked").each(function() {let topping = $(this).val();
+    toppingsArray.push(topping);});
     let newOrder = new Pizza(toppingsArray, pizzaSize)
     let price = newOrder.costCalculator()
     $(".pizza-size").html(pizzaSize);
